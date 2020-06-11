@@ -1,8 +1,8 @@
 import React from "react";
-import { ReactComponent as YouTubeIcon } from "../../../assets/img/svg/twitter.svg";
-import { ReactComponent as TwitterIcon } from "../../../assets/img/svg/twitter.svg";
-import { ReactComponent as FacebookIcon } from "../../../assets/img/svg/twitter.svg";
-import { ReactComponent as LinkedinIcon } from "../../../assets/img/svg/twitter.svg";
+import { ReactComponent as YouTubeIcon } from "../../../../src/logo.svg";
+import { ReactComponent as TwitterIcon } from "../../../../src/logo.svg";
+import { ReactComponent as FacebookIcon } from "../../../../src/logo.svg";
+import { ReactComponent as LinkedinIcon } from "../../../../src/logo.svg";
 
 import "./SocialLinks.scss";
 
