@@ -11,9 +11,9 @@ export default function MenuTop() {
   const [menuData, setMenuData] = useState([]);
 
   useEffect(() => {
-    getMenuApi().then(response => {
+    getMenuApi().then((response) => {
       const arrayMenu = [];
-      response.menu.forEach(item => {
+      response.menu.forEach((item) => {
         item.active && arrayMenu.push(item);
       });
       setMenuData(arrayMenu);
@@ -24,16 +24,16 @@ export default function MenuTop() {
     <Menu className="menu-top-web" mode="horizontal">
       <Menu.Item className="menu-top-web__logo">
         <Link to={"/"}>
-          <img src={logoWhite} alt="Agustín Navarro Galdon" />
+          <img src={logoWhite} alt="Andres Reyes" />
         </Link>
       </Menu.Item>
 
-      {menuData.map(item => {
+      {menuData.map((item) => {
         const external = item.url.indexOf("http") > -1 ? true : false;
         if (external) {
           return (
             <Menu.Item key={item._id} className="menu-top-web__item">
-              <a href={item.url} target="_blank" rel="noopener noreferrer">
+              <a href={item.url}  rel="noopener noreferrer">
                 {item.title}
               </a>
             </Menu.Item>
