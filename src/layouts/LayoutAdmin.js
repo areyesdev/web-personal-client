@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom'
-import { Layout } from 'antd';
+import React, { useState } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import { Layout } from "antd";
 import useAuth from "../hooks/useAuth";
-import MenuTop from '../components/Admin/MenuTop';
-import MenuSider from '../components/Admin/MenuSider';
-import AdminSignIn from '../pages/Admin/SignIn/SignIn';
+import MenuTop from "../components/Admin/MenuTop";
+import MenuSider from "../components/Admin/MenuSider";
+import AdminSignIn from "../pages/Admin/SignIn/SignIn";
 
-
-import './LayoutAdmin.scss';
+import "./LayoutAdmin.scss";
 //import routes from '../config/routes';
-
 
 export default function LayoutAdmin(props) {
   const { routes } = props;
@@ -25,7 +23,7 @@ export default function LayoutAdmin(props) {
         <Route path="/admin/login" component={AdminSignIn} />
         <Redirect to="/admin/login" />
       </>
-    )
+    );
   }
 
   if (user && !isLoading) {
@@ -45,9 +43,7 @@ export default function LayoutAdmin(props) {
           <Content className="layout-admin__content">
             <LoadRoutes routes={routes} />
           </Content>
-          <Footer className="layout-admin__footer">
-            Andres Reyes
-          </Footer>
+          <Footer className="layout-admin__footer">Andres Reyes</Footer>
         </Layout>
       </Layout>
     );
@@ -57,7 +53,6 @@ export default function LayoutAdmin(props) {
 }
 
 function LoadRoutes({ routes }) {
-
   return (
     <Switch>
       {routes.map((route, index) => (
